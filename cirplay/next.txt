@@ -1,0 +1,13 @@
+Debugging class game quiz show style.
+
+Live examples of most common issues!!!
+
+python coding in firmata
+
+code sensor
+
+tap sensor with strings game (battle ship)
+
+Find group/ people to code with 
+
+What is art in light painting

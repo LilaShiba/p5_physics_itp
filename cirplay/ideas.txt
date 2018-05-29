@@ -1,0 +1,33 @@
+pizza box dj: https://learn.adafruit.com/circuit-playground-pizza-box-dj-controller/overview
+
+Done: light paint: https://learn.adafruit.com/lightpaint-cplay/upload-the-light-paintbrush-code
+password vault: https://learn.adafruit.com/circuit-playground-password-vault/
+https://learn.adafruit.com/category/circuit-playground
+
+
+Easy: Fruit Music: https://learn.adafruit.com/circuit-playground-fruit-drums/hello-capacitive-touch
+Start with basic pen and paper music apps( piano, keyboard, etc)
+Leads into MIDI signals (great prep for pizza turn tables)
+
+MIDI software: http://hydrogen-music.org/hcms/node/21
+
+https://sourceforge.net/projects/hydrogen/files/Hydrogen/0.9.6%20Binaries/hydrogen-0.9.6-beta1.dmg/download
+
+Neo Pixel Paint:
+
+NEED SUDO FOR PILLOW via pip install
+https://learn.adafruit.com/circuit-playground-neoanim-using-bitmaps-to-animate-neopixels
+
+
+Easy first program: Beep when reset is pressed:
+https://blog.adafruit.com/2016/08/12/john-parks-circuit-playground-startup-sound-inspired-by-apple-iie-circuitplayground-johnedgarpark/
+
+
+EASY Hello Temperture: https://learn.adafruit.com/how-cold-is-it/hello-temperature
+Tell Temp
+Log Temp Changes
+Good for serial moniter practice.
+
+
+
+Hydrogen 9.7 https://sourceforge.net/projects/hydrogen/files/latest/download
