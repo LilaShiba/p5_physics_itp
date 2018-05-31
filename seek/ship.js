@@ -11,7 +11,6 @@ function Vehicle(x, y){
     this.maxforce = 0.5;
     this.health = 1;
     // smarty pants
-
     this.dna = [];
     this.dna[0] = random(-5,5);
     this.dna[1] = random(-5,5);
@@ -28,7 +27,6 @@ function Vehicle(x, y){
     // acceleration alters velocity
     this.velocity.add(this.acceleration);
     // Limit speed
-
     this.velocity.limit(this.maxspeed);
     this.position.add(this.velocity);
     // Reset accelerationelertion to 0 each cycle
