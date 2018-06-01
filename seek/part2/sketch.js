@@ -49,7 +49,6 @@ function draw() {
   }
   // Call the appropriate steering behaviors for our agents
   for (var i = vehicles.length-1; i >= 0 ; i--){
-    vehicles[i].boundaries();
     vehicles[i].behaviors(food, poison);
     vehicles[i].update();
     vehicles[i].display();

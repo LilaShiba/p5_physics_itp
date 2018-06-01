@@ -6,20 +6,14 @@ function Vehicle(x, y){
     this.position = createVector(x, y);
     // size
     this.r = 6;
-    // abilities
+    // ability
     this.maxspeed = 5;
     this.maxforce = 0.5;
     this.health = 1;
     // smarty pants
     this.dna = [];
-    // food weight
     this.dna[0] = random(-5,5);
-    // poison weight
     this.dna[1] = random(-5,5);
-    // food perception
-    this.dna[2] = random(10,100);
-    // poision perception
-    this.dna[3] = random(10,100);
 
   // Method to update location
   this.update = function() {
@@ -103,12 +97,9 @@ function Vehicle(x, y){
     rotate(angle);
 
     stroke(0,255,0);
-    noFill();
     line(0,0,0, -this.dna[0]*20);
-    ellipse(0,0,this.dna[2] * 2)
     stroke(255,0,0);
     line(0,0,0, -this.dna[1]*20);
-    ellipse(0, 0,this.dna[3] * 2);
 
     // Vehicle color to show health
     var gr = color(0,255,0);
@@ -125,30 +116,8 @@ function Vehicle(x, y){
     vertex(this.r, this.r * 2);
     endShape(CLOSE);
 
+
+
     pop();
-  }
-  this.boundaries = function(){
-    let desired = null;
-    var d = 25;
-
-    if (this.position.x < d) {
-      desired = createVector(this.maxspeed, this.velocity.y);
-    } else if (this.position.x > width - d) {
-      desired = createVector(-this.maxspeed, this.velocity.y);
-    }
-
-    if (this.position.y < d) {
-      desired = createVector(this.velocity.x, this.maxspeed);
-    } else if (this.position.y > height - d) {
-      desired = createVector(this.velocity.x, -this.maxspeed);
-    }
-
-    if (desired !== null) {
-      desired.normalize();
-      desired.mult(this.maxspeed);
-      let steer = p5.Vector.sub(desired, this.velocity);
-      steer.limit(this.maxforce);
-      this.applyForce(steer);
-    }
   }
 }
