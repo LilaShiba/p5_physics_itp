@@ -13,9 +13,9 @@ function Vehicle(x, y){
     // smarty pants
     this.dna = [];
     // food weight
-    this.dna[0] = random(1,5);
+    this.dna[0] = random(-5,5);
     // poison weight
-    this.dna[1] = random(1,5);
+    this.dna[1] = random(-5,5);
     // food perception
     this.dna[2] = random(10,100);
     // poision perception
