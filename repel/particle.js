@@ -24,7 +24,7 @@ function Obj(x,y){
 // gravity
   this.attracted = function(target){
     // Attraction is inversely proportional to the square of the distance
-    //distance between planet and obj
+    // between planet and obj
   	var force = p5.Vector.sub(target, this.pos);
     // Calculates the length of the vector, squared
     var dsquared = force.magSq();

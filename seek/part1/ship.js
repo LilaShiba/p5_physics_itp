@@ -36,8 +36,8 @@ function Vehicle(x, y){
     for( var i = 0; i < list.length; i++){
       var d = this.position.dist(list[i]);
       if (d < record ){
-        record = d;
-        closest = i;
+        var record = d;
+        var closest = i;
       }
     }
     if(record < 5){

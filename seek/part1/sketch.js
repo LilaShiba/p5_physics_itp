@@ -25,7 +25,7 @@ function draw() {
   background(51);
   // Draw food
   for (var i = 0; i < food.length; i++){
-    fill(0,255,0);
+    fill(0,255,0,5);
     noStroke();
     ellipse(food[i].x,food[i].y,8,8);
   }
