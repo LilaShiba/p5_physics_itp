@@ -2,7 +2,7 @@ var moon = [];
 var gravity;
 
 function setup(){
-  createCanvas(700,700);
+  createCanvas(800,800);
   gravity = new Gravity();
   for (var i = 0; i < 100; i++){
     moon[i] = new Mover();

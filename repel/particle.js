@@ -1,5 +1,4 @@
 function Obj(x,y){
-
 // postion
 	this.pos = createVector(x,y);
 // velocity
