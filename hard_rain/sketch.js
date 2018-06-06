@@ -33,14 +33,19 @@ function draw(){
       if(m !== n && m.intersects(n)){
         hit = true;
       }
-      if(hit && random(100) < 1 && moons.length < 250){
-          m.health = m.health + 0.1;
-          if(m.health > 0.5){
-            m.health = 1;
+      if(hit && random(100) < 1 && moons.length < 25){
             m.mass = 5;
             moons.push(new Moon(m.pos.x +10,m.pos.y +10, m.vel.x, m.vel.y, 5))
-          }
+
       }
+      if (hit && random(100) < 0.1 && moons.length < 300){
+        m.health = m.health + 0.1;
+            if(m.health > 2){
+                m.health = 0;
+                m.mass = 5;
+                moons.push(new Moon(m.pos.x +10,m.pos.y +10, m.vel.x, m.vel.y, 5))
+              }
+        }
     }
   }
 }
