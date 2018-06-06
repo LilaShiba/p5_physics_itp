@@ -21,6 +21,8 @@ function Moon(x,y,v,z,u){
     return (d < 16);
   }
 
+
+
   this.display = function(){
     stroke(255,10);
     strokeWeight(4);

@@ -14,15 +14,11 @@ function setup(){
 
 function draw(){
   background(41);
-  // for (var i = 0; i < moons.length; i++){
-  //   let force = gravity.attraction(moons[i]);
-  //   moons[i].applyForce(force);
-  //   moons[i].update();
-  //   gravity.display();
-  //   moons[i].display();
-  // }
   var moon_break = moons;
-    gravity.display();
+  gravity.display();
+  gravity.eat(moons);
+
+
   for (m of moons){
     let force = gravity.attraction(m);
     m.applyForce(force);
@@ -44,8 +40,8 @@ function draw(){
                 m.health = 0;
                 m.mass = 5;
                 moons.push(new Moon(m.pos.x +10,m.pos.y +10, m.vel.x, m.vel.y, 5))
-              }
         }
+      }
     }
   }
 }
