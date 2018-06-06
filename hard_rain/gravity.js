@@ -25,6 +25,7 @@ function Gravity(){
       var d = this.pos.dist(object[i].pos);
       if (d < 20){
         object.splice(i ,1);
+        return true;
       }
     }
   }
