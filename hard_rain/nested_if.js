@@ -40,8 +40,8 @@ function draw(){
       }
       if (hit && random(100) < 0.1 && moons.length < 255){
         m.health = m.health + 0.1;
-            if(m.health > 1){
-                m.health = 1;
+            if(m.health > 2){
+                m.health = 0;
                 m.mass = 5;
                 moons.push(new Moon(m.pos.x +10,m.pos.y +10, m.vel.x, m.vel.y, 5))
               }
