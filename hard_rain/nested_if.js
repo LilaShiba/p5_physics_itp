@@ -41,6 +41,10 @@ function draw(){
                 m.health = 0;
                 m.mass = 5;
                 moons.push(new Moon(m.pos.x +10,m.pos.y +10, m.vel.x, m.vel.y, 5))
+        } else if (hit && m.mass < 0.5){
+            if (m.mass > 0.01){
+            m.mass =  m.mass - 1;
+            }
         }
       }
     }
