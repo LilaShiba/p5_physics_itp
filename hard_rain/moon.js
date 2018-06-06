@@ -1,8 +1,8 @@
-function Moon(x,y,v){
+function Moon(x,y,v,z,u){
   this.pos = createVector(x,y);
   this.vel = createVector(v,0);
   this.acc = createVector(0,0);
-  this.mass = 10;
+  this.mass = z;
   this.health = 0;
 
   this.applyForce = function(force){

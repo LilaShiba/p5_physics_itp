@@ -2,7 +2,7 @@ function Gravity(){
   //start in CENTER
   this.pos = createVector(width/2, height/2);
   this.mass = 10;
-  this.G = 1;
+  this.G = 6.687;
 
   this.attraction = function(m){
     // direction of force
@@ -22,7 +22,7 @@ function Gravity(){
   this.display = function(){
     ellipseMode(CENTER);
     strokeWeight(255);
-    stroke(2);
+    stroke(1);
     // make planet 2x larger than orbit body
     fill(255);
     ellipse(this.pos.x, this.pos.y, this.mass *2, this.mass * 2);
