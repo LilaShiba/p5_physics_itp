@@ -38,6 +38,9 @@ function Particle(x,y,m){
     steer.limit(this.maxforce);
     return steer;
   }
+  this.color = function(x,y,z){
+    fill(x,y,z);
+  }
 
   this.dead = function(){
     if (this.health < 0.01){

@@ -1,4 +1,5 @@
 var particles = [];
+var moon_pieces = [];
 var earth;
 // make particles avoid a target
 // while avoiding each other
@@ -12,6 +13,12 @@ function setup(){
     m = 6;
     particles[i] = new Particle(x,y,m);
   }
+  for (var i = 0; i < 20; i++){
+    x = random(0,400);
+    y = random(0,400);
+    m = 6;
+    moon_pieces[i] = new Particle(x,y,m);
+  }
   earth = new Gravity()
   leader = new Particle(200,400,10);
 }
@@ -22,6 +29,7 @@ function draw(){
   background(0);
   earth.display();
   earth.eat(particles);
+  earth.eat(moon_pieces);
   let f = earth.attraction(leader);
   leader.show();
   leader.update();
@@ -37,6 +45,21 @@ function draw(){
     if(p.intersects(leader)){
       p.pos.x += 4;
       p.pos.y += 3;
+    }
+  }
+
+  for (m of moon_pieces){
+    let force = earth.attraction(m);
+    m.applyForce(force);
+    m.show();
+    m.update();
+    for(mm of moon_pieces){
+      if(mm != m && m.intersects(mm)){
+        if(random(1) < 0.05 && m.mass > 0.01 && moon_pieces.length < 250){
+          m.mass = m.mass - 0.5;
+          moon_pieces.push(new Particle(m.pos.x + 1,m.pos.y + 1,m.mass));
+        }
+      }
     }
   }
 }
