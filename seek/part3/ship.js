@@ -59,7 +59,7 @@ function Vehicle(x, y){
       var d = this.position.dist(list[i]);
       if (d < record && perception ){
         record = d;
-        closest = i;
+        closest = list[i];
       }
     }
     // moment of eating
@@ -67,7 +67,7 @@ function Vehicle(x, y){
       list.splice(closest ,1);
       this.health += nutrition;
     } else if (closest > -1) {
-      return this.seek(list[closest]);
+      return this.seek(closest);
     }
     return createVector(0, 0);
   }

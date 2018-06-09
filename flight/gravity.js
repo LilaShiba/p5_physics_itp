@@ -1,25 +1,23 @@
 function Gravity(){
-  //start in CENTER
   this.pos = createVector(width/2, height/2);
   this.mass = 20;
-  this.G = 6.687;
+  this.G = 6.687
 
   this.attraction = function(m){
-    // direction of force
+    //force direction :p
     let force = p5.Vector.sub(this.pos, m.pos);
     // distance between objects
     let distance = force.mag();
-    // limit for atypical
-    distance = constrain(distance, 5, 40);
-    // normalize
+    // limit that craziness
+    distance = constrain(distance, 5, 50);
     force.normalize();
-    // get that gravitional force
+    // gravitional force
     let strength = (this.G * this.mass * m.mass)/(distance * distance);
     // force vector = magnitude * direction
     force.mult(strength);
     return force;
-  }
 
+  }
   this.eat = function(object){
     for (var i = 0; i < object.length; i++){
       var d = this.pos.dist(object[i].pos);
