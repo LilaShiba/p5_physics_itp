@@ -57,7 +57,7 @@ function draw(){
       if(mm != m && m.intersects(mm)){
         if(random(1) < 0.05 && m.mass > 0.01 && moon_pieces.length < 150){
           m.mass = m.mass - 0.5;
-          moon_pieces.push(new Particle(m.pos.x + 1,m.pos.y + 1,m.mass));
+          moon_pieces.push(new Particle(m.pos.x, m.pos.y ,m.mass));
         }
       }
     }
