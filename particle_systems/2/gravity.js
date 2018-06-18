@@ -23,7 +23,7 @@ function Gravity(){
   this.eat = function(object){
     for (var i = 0; i < object.length; i++){
       var d = this.pos.dist(object[i].pos);
-      if (d < 20){
+      if (d < 25){
         object.splice(i ,1);
         return true;
       }

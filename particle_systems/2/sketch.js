@@ -28,8 +28,8 @@ function setup(){
 function draw(){
   background(0);
   earth.display();
-  earth.eat(particles);
   earth.eat(moon_pieces);
+  earth.eat(particles);
   let f = earth.attraction(leader);
   leader.show();
   leader.update();
