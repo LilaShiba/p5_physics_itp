@@ -52,7 +52,7 @@ class Particle{
     // distance between objects
     let distance = force.mag();
     // limit for atypical
-    distance = constrain(distance, 5, 40);
+    distance = constrain(distance, 20, 50);
     // normalize
     force.normalize();
     // get that gravitional force
