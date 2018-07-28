@@ -74,4 +74,4 @@ def ohms(ohms_string):
 
 #final_string = first_color + second_color
     print(first_color + " " + second_color + " " + third_color + " gold")
-ohms('300 ohms')
+ohms('450 ohms')
