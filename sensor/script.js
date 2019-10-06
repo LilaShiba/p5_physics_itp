@@ -90,8 +90,6 @@ function deviceMotionHandler(yourMotion){
     }
     
   } else{
-    const rotate_x = document.querySelector("#r_x")
-    rotate_x.innerHTML = "Try using google chrome on a phone"
     console.log(yourMotion)
   }
 }
