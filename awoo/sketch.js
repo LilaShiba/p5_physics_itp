@@ -7,7 +7,7 @@ var particles = [];
 function setup() {
   createCanvas(displayWidth, displayHeight);
   attractor = createVector(displayWidth/2,displayHeight/2);
-  attractor2 = createVector(50+(displayWidth/2),300);
+  attractor2 = createVector(50+(displayWidth/2),50+(displayHeight/2));
   // change background to draw for no trail
   background(255,244,255);
   

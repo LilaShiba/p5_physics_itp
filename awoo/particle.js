@@ -23,8 +23,8 @@ function Particle(x,y) {
   this.show = function(){
     // draw me
     fill(255,255,255,20)
-    stroke(0);
-    strokeWeight(1);
+    stroke(10);
+    strokeWeight(13);
     // update with current pos vector
     //point(this.pos.x, this.pos.y)
     ellipse(this.pos.x, this.pos.y, this.mass,this.mass)
