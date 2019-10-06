@@ -67,7 +67,6 @@ function deviceMotionHandler(yourMotion){
     var z_accel = yourMotion.accelerationIncludingGravity.z
     var r_xrate = yourMotion.rotationRate.alpha
     console.log(yourMotion)
-    
 
     
     if (x_accel != null){
@@ -92,7 +91,7 @@ function deviceMotionHandler(yourMotion){
     
   } else{
     const rotate_x = document.querySelector("#r_x")
-    rotate_x.innerHTML = yourMotion
+    rotate_x.innerHTML = "Try using google chrome on a phone"
     console.log(yourMotion)
   }
 }
