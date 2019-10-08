@@ -90,8 +90,7 @@ function deviceMotionHandler(yourMotion){
     }
     
   } else{
-    const accelX = document.querySelector("#x")
-      accelX.innerHTML = " Oh boy, 1.) Please go to settings, 2.)select Safari, 3.and enable motion and orientation access"
+    console.log('not working')
   }
 }
 
