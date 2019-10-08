@@ -95,25 +95,3 @@ function deviceMotionHandler(yourMotion){
 }
 
 
-
-//window.navigator.vibrate([200, 100, 200]);
-
-// var battery = navigator.battery || navigator.webkitBattery || navigator.mozBattery;
-
-// function logBattery(battery) {
-//     console.log(battery.level);
-//     console.log(battery.charging);
-
-//     battery.addEventListener('chargingchange', function() {
-//         console.log('Battery chargingchange event: ' + battery.charging);
-//     }, false);
-  
-//   const batteryStuff = document.querySelector("#battery")
-//     batteryStuff.innerHTML = battery.level;
-// }
-
-// if (navigator.getBattery) {
-//     navigator.getBattery().then(logBattery);
-// } else if (battery) {
-//     logBattery(battery);
-// }
