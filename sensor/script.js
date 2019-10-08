@@ -90,7 +90,7 @@ function deviceMotionHandler(yourMotion){
     }
     
   } else{
-    console.log(yourMotion)
+    console.log('not working')
   }
 }
 
