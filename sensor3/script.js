@@ -42,17 +42,16 @@ function setResult(result) {
 }
 
 // get user permission to allow device motion event api to work
-document.getElementById("getans").addEventListener("click",
-DeviceMotionEvent.requestPermission()
-.then(response => {
-  if (response == 'granted') {
-    window.addEventListener('devicemotion', (e) => {
-      // do something with e
-    })
-  }
-})
-.catch(console.error)
- );
+
+function get_permission() {
+  DeviceMotionEvent.requestPermission()
+  .then(response => {
+    if (response == 'granted') {
+      setInterval(deviceMotionHandler, 900) 
+    }
+  })
+  .catch(console.error)
+}
 
 // Track and show user's device info
 function deviceMotionHandler(yourMotion){
