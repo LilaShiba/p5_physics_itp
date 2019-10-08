@@ -3,8 +3,7 @@ function testDeviceOrientation() {
   
   // Not a function :(
   if (typeof DeviceOrientationEvent != 'function') {
-    window.addEventListener('devicemotion', onClick);
-    document.getElementById("myBtn").addEventListener("click", onClick); 
+    
     return setResult('DeviceOrientationEvent NOT detected')
   }
   
@@ -47,11 +46,15 @@ function get_permission() {
   DeviceMotionEvent.requestPermission()
   .then(response => {
     if (response == 'granted') {
+      window.addEventListener('devicemotion', deviceMotionHandler);
       setInterval(deviceMotionHandler, 900) 
+
     }
   })
   .catch(console.error)
 }
+
+
 
 // Track and show user's device info
 function deviceMotionHandler(yourMotion){
