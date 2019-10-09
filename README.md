@@ -1,4 +1,3 @@
-# p5js
 ### Examples
 0. [phone sensors](https://kyle1james.github.io/p5_physics_itp/sensor3/)
 1. [linear regression](https://kyle1james.github.io/p5_physics_itp/linear_regression/)
